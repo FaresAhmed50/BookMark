@@ -1,0 +1,75 @@
+
+
+main{
+
+    background-color: #f7ecde ;
+    min-height: 100vh;
+}
+
+.pb-50{
+
+    padding-bottom: 50px;
+}
+
+
+.dotted{
+
+    border-bottom: black dotted 2px;
+}
+
+h1{
+    z-index: 1;
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+}
+
+h1::after{
+
+    position: absolute;
+    content: "";
+    width: 260px;
+    height: 20px;
+    background-color: #fec260;
+    bottom: 0;
+    left: calc(50% - 130px);
+    z-index: -1;
+    transition: ease-in-out 0.3s;
+
+} 
+
+h1:hover::after{
+
+    height: 40px;
+}
+
+.label{
+
+    padding: 5px;
+    i{
+        padding-right: 5px;
+    }
+
+
+}
+
+
+.userInput{
+
+    border-bottom: dotted 2px black;
+}
+
+
+.userdata tbody tr td button i{
+
+    padding: 2px;
+}
+
+
+@media (max-width : 425px) {
+    
+    .fs-md-6{
+
+        font-size: large;
+    }
+}

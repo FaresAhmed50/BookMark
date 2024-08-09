@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <main>
+        <div class="container py-5 ">
+            <div class="container pb-50 dotted">
+                <h1 class="text-center position-relative">Bookmarker</h1>
+            </div>
+
+            <div class="container effect">
+                <h2 class="text-center py-3 fs-md-6">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i> 
+                </h2>
+
+                <div class="userInput">
+
+                    <span class="label">
+                        <i class="fa fa-book-bookmark"></i>
+                        <label for="BookMark_name" class="fw-bolder">Site Name</label>
+                    </span>
+                    <div class="form-floating mb-3">
+                        <input oninput="validationInput(this)" type="text" class="form-control" id="BookMark_name" placeholder="BookMark_name">
+                        <label for="BookMark_name">BookMark name</label>
+                    </div>
+    
+    
+                    <span class="label">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        <label for="website_url" class="fw-bolder">Site URL</label>
+                    </span>
+                    <div class="form-floating mb-4">
+                        <input type="text" oninput="validationInput(this)" class="form-control" id="website_url" placeholder="website_url">
+                        <label for="website_url">Website URL</label>
+                    </div>
+
+                    <button onclick="addBookMark()" class="btn btn-danger pe-5 ps-5 d-block m-auto mb-4">submit</button>
+                </div>
+
+                <div class="userdata">
+
+                    <table class="table mt-4 text-center ">
+                        <thead>
+                            <tr>
+                                <th>index</th>
+                                <th>Website Name</th>
+                                <th>Visite</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userData">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
