@@ -62,13 +62,13 @@ function displayBookMark(list){
                                 <td>${bookMarkList[i].name}</td>
                                 <td>
                                     <button onclick="bookMark_Visit(${i})" class="btn btn-primary ">
-                                        <i class="fa-solid fa-eye fa-2 pe-2"></i>
+                                        <i class="fa-solid fa-eye fa-2 pe-2 special"></i>
                                         Visit
                                     </button>
                                     </td>
                                 <td>
                                     <button onclick="deleteBookMark(${i})" class="btn btn-danger">
-                                        <i class="fa-solid fa-trash-can"></i>
+                                        <i class="fa-solid fa-trash-can special"></i>
                                         Delete
                                     </button>
                                 </td>

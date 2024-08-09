@@ -72,4 +72,8 @@ h1:hover::after{
 
         font-size: large;
     }
+
+    .special{
+        display: none;
+    }
 }
