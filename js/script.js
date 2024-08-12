@@ -34,17 +34,41 @@ function addBookMark(){
 
 
     if(regex[bookMark_name.id].status && regex[bookMark_url.id].status){
-        bookMarkList.push(Marks);
-        displayBookMark(bookMarkList);
-        updateLocalStorage();
-        removeValidation(bookMark_name);
-        removeValidation(bookMark_url);
-        clearForm();
+
+        if(bookMarkList.length > 0 && checkdouble(Marks.name , Marks.url) == true){
+            alertdouble();
+            removeValidation(bookMark_name);
+            removeValidation(bookMark_url);
+            clearForm();
+            console.log("fareessss");
+        }else{
+
+            bookMarkList.push(Marks);
+            displayBookMark(bookMarkList);
+            updateLocalStorage();
+            removeValidation(bookMark_name);
+            removeValidation(bookMark_url);
+            clearForm();
+        }
     }else{
         alertMassage();
     }
 
     
+}
+
+
+// ! function used to check if the data entered by the user has been entered befor or not
+function checkdouble(name , url){
+
+    for(var i = 0 ; i < bookMarkList.length ; i++){
+
+        if(bookMarkList[i].name == name || bookMarkList[i].url == url){
+            return true;
+        }
+    }
+
+
 }
 
 
@@ -112,11 +136,12 @@ function validationInput(obj){
 }
 
 
-
+// ! function used to visit the url that the user enter
 function bookMark_Visit(index){
 
     open(bookMarkList[index].url);
 }
+
 
 // * function used to clear the form after the user submet the required data
 function clearForm(){
@@ -132,7 +157,7 @@ function removeValidation(obj){
     regex[obj.id].status = false;
 }
 
-
+//! the alert function that used to call for the alert massage 
 function alertMassage(){
 
     Swal.fire({
@@ -149,4 +174,19 @@ function alertMassage(){
         icon: "error",
         showCloseButton: true,
 });
+}
+
+
+function alertdouble(){
+
+    Swal.fire({
+        title: "The name or the URL is already been saved",
+
+        html:`<div class="d-flex  flex-column align-items-start">
+            <p> <i class="fa-regular fa-circle-right p-2 fa-col" style="color:#bb4120;"></i>Please enter anothe name or URL</p>
+            </div>`,
+
+        icon: "error",
+        showCloseButton: true,
+    })
 }
