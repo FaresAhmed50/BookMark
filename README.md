@@ -31,8 +31,10 @@ Delete a bookmark by clicking the "Delete" button.
 ## Validation Rules
 **Site Name**:
 Must contain between 3 to 10 alphanumeric characters.
+
 **Site URL**:
 Must be a valid HTTP or HTTPS URL.
+
 If inputs are invalid, an error message is displayed via SweetAlert2.
 
 ## File Structure
