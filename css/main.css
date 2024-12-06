@@ -17,6 +17,15 @@ main{
     border-bottom: black dotted 2px;
 }
 
+.effect h2{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Pacifico", cursive;
+}
+
+
+
 h1{
     z-index: 1;
     font-size: 50px;
